@@ -1,0 +1,8 @@
+.Track {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.87);
+    border-width: 0 0 2px 0;
+    margin-bottom: 20px;
+    align-items: center;
+}
