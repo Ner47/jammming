@@ -6,28 +6,14 @@ import SearchResults from '../SearchResults/SearchResults';
 import Playlist from '../playlist/Playlist';
 import Spotify from '../../util/Spotify';
 
-
-const MUSIC = [
-  {
-    name: 'Pain',
-    artist: 'Three Days Grace',
-    album: 'Some',
-    id: 999,
-    uri: '86b4bd57bc0e4668a5bf4ca9e9328354'
-  },
-  {
-    name: 'Zombie',
-    artist: 'Bad Wolves',
-    album: 'Some',
-    id: 112,
-    uri: 'spotify:track:0YIi1CqYCtRm7Xw7V30xNq'
-  }
-];
-
 function App() {
-  const [searchResults, setSearchResults] = useState(MUSIC);
+  const [searchResults, setSearchResults] = useState([]);
   const [playlistName, setplaylistName] = useState('New Playlist');
   const [playlistTracks, setPlaylistTracks] = useState([]);
+
+  const search = useCallback((term) => {
+    Spotify.search(term).then(setSearchResults)
+  }, []);
 
   const onNameChange = useCallback((value) => {
     setplaylistName(value);
@@ -59,7 +45,7 @@ function App() {
     <>
       <h1>Ja<span className='highlight'>mmm</span>ing</h1>
       <div className='App'>
-        <SearchBar />
+        <SearchBar onSearch={search}/>
         <div className='App-playlist'>
           <SearchResults 
             searchResults={searchResults} 

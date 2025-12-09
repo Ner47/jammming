@@ -8,7 +8,7 @@
     min-width: 270px;
 }
 
-input {
+.Playlist input {
     border: 1px solid rgba(255, 255, 255, 0.87);
     background: none;
     border-width: 0 0 1px 0;

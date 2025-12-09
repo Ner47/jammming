@@ -1,6 +1,6 @@
-const clientId = '86b4bd57bc0e4668a5bf4ca9e9328354'; // Insert client ID here.
-const redirectUri = 'http://[::1]:5173/'; // Have to add this to your accepted Spotify redirect URIs on the Spotify API.
-let accessToken = 'BQARtbuwy4Jvand27ZdJ67Y1Z865wCSbeGhWQByVi3h_xk_YHaOH7HrUH9WHhyZds-OVAlZAX8KxUkCQp_No8a5hX1FPkmSxn8JCo6L-ol_UbIVUmr9h4icPQ0mvLjcJ2ayXnPOf_M54l_pA3spxlBRkWCVCzZEkgNfs2RWzTeyo8XclB5fRv3AUkP8_5Ow7sx1Qr35j8XFACvm7eJ41kkN_UH2Hpq6s06Uxhn5lZerLp59xB0RPzn-rcHZ8GR6U5s1LS8ecw_d4ZNJky1Wbv50pR9QhFeDmAFOI7L0Lgh3Ri2sZHHG3iPVPyccT_elgCtX6YBq2';
+const clientId = ''; 
+const redirectUri = 'http://[::1]:5173/';
+let accessToken = '';
 
 const Spotify = {
   getAccessToken() {
