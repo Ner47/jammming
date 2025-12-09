@@ -6,7 +6,9 @@ function Tracklist(props) {
       {props.tracks.map((track) => (
       <Track
         key={track.id}
-        track={track} 
+        track={track}
+        onAdd={props.onAdd}
+        onRemove={props.onRemove}
         isRemoval={props.isRemoval} />
       ))}
     </div>
