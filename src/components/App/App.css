@@ -1,5 +1,6 @@
 #root {
   max-width: 1280px;
+  min-width: 60%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -7,4 +8,14 @@
 
 .highlight {
   color: #4e4ec3;
+}
+
+.App-playlist {
+  display: flex;
+  gap: 3rem;
+}
+
+.App-playlist div {
+  min-width: 200px;
+  width: 100%;
 }

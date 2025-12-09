@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import './App.css';
 
 import SearchBar from '../SearchBar/SearchBar';
@@ -25,6 +25,10 @@ function App() {
   const [searchResults, setSearchResults] = useState(MUSIC);
   const [playlistName, setplaylistName] = useState('New Playlist');
   const [playlistTracks, setPlaylistTracks] = useState(MUSIC);
+
+  const onNameChange = useCallback((value) => {
+    setplaylistName(value);
+  }, []);
   
   return (
     <>
@@ -33,7 +37,11 @@ function App() {
         <SearchBar />
         <div className="App-playlist">
           <SearchResults searchResults={searchResults} />
-          <Playlist playlistName={playlistName} playlistTracks={playlistTracks} />
+          <Playlist 
+            playlistName={playlistName} 
+            playlistTracks={playlistTracks}
+            onNameChange={onNameChange}
+          />
         </div>
       </div>
     </>
